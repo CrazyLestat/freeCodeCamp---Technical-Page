@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+
+html {
+  font-family: "Luxurious Roman", cursive;
+  line-height: 1.5;
+  font-size: 14px;
+}
+header {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+header:first-child {
+    padding-left: 10px;
+}
+
+#navbar header {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#navbar {
+  display: inline-block;
+  position: fixed;
+  height: 100%;
+  max-width: 350px;
+  background-color: #b0c4de;
+  top: 0px;
+  left: 0px;
+  border-right: solid;
+  border-color: #6a5acd;
+  align-items: center;
+  overflow: hidden;
+}
+
+#navbarul {
+  line-height: 25px;
+  font-size: 16px;
+  width: auto;
+  padding: 16px;
+}
+
+#navbar li {
+  list-style: none;
+  color: #4d4e53;
+  border-bottom: solid;
+  border-color: #00008b;
+  border-width: thin;
+  padding: 15px 5px;;
+}
+#navbar a:hover {
+    color: #c71585;
+  }
+
+#main-doc {
+    display: block;
+    margin-left: 350px;
+    padding-left: 10px;
+  }
+
+.pre-one {
+  font-size: 13px;
+  background-color: #e6e6fa;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 20px;
+}
+
+.pre {
+  background-color: #e6e6fa;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 70%;
+  margin-left: 20px;
+  font-size: 13px;
+  line-height: 1rem;
+  padding-left: 10px;
+}
+section {
+  margin-bottom: 30px;
+}
+
+.fa-bars {
+  font-size: 30px;
+  display: none;
+  position: absolute;
+}
+.fa-times {
+    display: none;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+.nav-header {
+    width: 100%;  
+    display: flex;  
+    flex-direction: row;
+    justify-content: center; 
+     align-items: center;
+}
+
+@media screen and (max-width: 680px) {
+  #navbarul.responsive {
+    position: relative;
+  }
+  #navbarul.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #navbarul.responsive li {
+    float: none;
+    display: inline;
+  }
+  #navbarul.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  header:first-of-type {
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+    #navbar {
+        visibility: hidden;
+        max-width: 200px;
+    }
+  
+    #main-doc {
+        margin-left: 15px;
+        padding-top: 30px;
+    }
+    .fas {
+        display: block;
+    }
+    
+    .fa-times {
+        display: block;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+    .nav-header {
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+}

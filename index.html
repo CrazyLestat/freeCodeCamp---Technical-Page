@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>Basics of HTML</title>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <script src="https://kit.fontawesome.com/cae9400856.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--Rest of the code-->
+<body>
+  <button id="hamburger"><i class="fas fa-bars"></i></button>
+
+<nav id="navbar">
+  <div class="nav-header">
+    <header>Basics of HTML</header>
+    <button id="close"><i class="fas fa-times"></i></button></div>
+  </div>
+  <script src="index.js"></script>
+  <ul id="navbarul">
+    <li><a class="nav-link" href="#Introduction_to_HTML">Introduction to HTML</a> </li>
+    <li><a class="nav-link" href="#Prerequisites">Prerequisites</a> </li>
+    <li><a class="nav-link" href="#The_basics:_headings_and_paragraphs">The basics: headings and paragraphs</a></li>
+    <li><a class="nav-link" href="#Unordered_Lists">Unordered Lists</a></li>
+    <li><a class="nav-link" href="#Ordered_Lists">Ordered Lists</a></li>
+    <li><a class="nav-link" href="#Summary">Summary</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction_to_HTML">
+    <header>Introduction to HTML</header>
+    <p> At its heart, HTML is a fairly simple language made up of elements, which can be applied to pieces of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? A navigation menu?), and embed content such as images and videos into a page. This module will introduce the first two of these and introduce fundamental concepts and syntax you need to know to understand HTML. </p>
+  </section>
+  <section class="main-section" id="Prerequisites">
+    <header>Prerequisites</header>
+    <p>
+      You do not need any previous HTML knowledge, but you should have:
+    </p>
+    <ul>
+      <li>Basic familiarity with using computers and using the web passively.</li>
+      <li>Basic work enviroment set up (i.e., PC, text editor, web browser, etc.)</li>
+    </ul>
+  </section>
+
+  <section class="main-section" id="The_basics:_headings_and_paragraphs">
+    <header>The basics: headings and paragraphs</header>
+    <p>One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.
+    </p>
+    <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p>
+    <p>Structured content makes the reading experience easier and more enjoyable.</p>
+    <p>In HTML, each paragraph has to be wrapped in a <code>&ltp&gt</code> element, like so:
+    </p>
+    <p><code class="pre-one">
+        &ltp&gtI am a paragraph, oh yes I am.&lt/p&gt
+      </code> </p>
+    <p>Each heading has to be wrapped in a heading element:</p>
+    <p><code class="pre-one">
+        &lth1&gtI am the title of the story.&lt/h1&gt
+      </code></p>
+    <p>There are six heading elements: <code>
+        &lth1&gt,
+        &lth2&gt,
+        &lth3&gt,
+        &lth4&gt,
+        &lth5&gt</code>, and <code>
+        &lth6&gt</code>. Each element represents a different level of content in the document; <code>
+        &lth1&gt</code> represents the main heading, <code>
+        &lth2&gt</code> represents subheadings, <code>
+        &lth3&gt</code> represents sub-subheadings, and so on.</p>
+  </section>
+
+  <section class="main-section" id="Unordered_Lists">
+    <header>Unordered Lists</header>
+    <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
+    <p>
+    <ul>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>bread</li>
+      <li>hummus</li>
+    </ul>
+    </p>
+    <p>Every unordered list starts off with a <code>
+        &ltul&gt</code> element—this wraps around all the list items.</p>
+    <p>The last step is to wrap each list item in a <code>
+        &ltli&gt</code> (list item) element:</p>
+    <code class="pre">
+      <p>
+        &ltul&gt</p>
+      <p>
+        &ltli&gtmilk
+        &lt/li&gt</p>
+      <p>
+        &ltli&gteggs
+        &lt/li&gt</p>
+      <p>
+        &ltli&gtbread
+        &lt/li&gt</p>
+      <p>
+        &ltli&gthummus
+        &lt/li&gt</p>
+      <p>
+        &lt/ul&gt </p>
+    </code>
+  </section>
+
+  <section class="main-section" id="Ordered_Lists">
+    <header>Ordered Lists</header>
+    <p>Ordered lists are lists in which the order of the items does matter. Let's take a set of directions as an example:</p>
+    <ol>
+      <li>Drive to the end of the road</li>
+      <li>Turn right</li>
+      <li>Go straight across the first two roundabouts</li>
+      <li>Turn left at the third roundabout</li>
+      <li>The school is on your right, 300 meters up the road</li>
+    </ol>
+    <p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <code>&ltol&gt</code> element, rather than <code>&ltul&gt</code>:</p>
+    <code class="pre">
+      <p> &ltol&gt </p>
+      <p> &ltli&gtDrive to the end of the road&lt/li&gt </p>
+      <p> &ltli&gtTurn right&lt/li&gt </p>
+      <p> &ltli&gtGo straight across the first two roundabouts&lt/li&gt </p>
+      <p> &ltli&gtTurn left at the third roundabout&lt/li&gt </p>
+      <p> &ltli&gtThe school is on your right, 300 meters up the road&lt/li&gt
+        &ltol&gt </p>
+    </code>
+  </section>
+
+  <section class="main-section" id="Summary">
+    <header>Summary</header>
+    <p>That's it for now! This article should have given you a good idea of how to start marking up text in HTML and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our Advanced text formatting article later on.</p>
+  </section>
+  <section class="main-section" id="Reference">
+
+    <header>Reference</header>
+    <ul>
+      <li>All the documentation on this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#ordered" target="_blank">MDN</a>.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
